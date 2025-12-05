@@ -21,7 +21,7 @@
 2. LEMEZ
 ------------------
 1. GO ULTRA - Instrumental
-2. 2. ITS OK - Instrumental
+2. ITS OK - Instrumental
 3. BEAT KILLA - Instrumental
 4. SELYEM - Instrumental
 5. ON ME - Instrumental
