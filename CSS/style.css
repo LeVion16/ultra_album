@@ -43,7 +43,7 @@ nav ul{
     justify-content: center;
     flex-wrap: nowrap;
     flex-direction: row;
-    gap: 10rem;
+    gap: 5rem;
 }
 
 nav ul li{
@@ -59,13 +59,15 @@ nav ul li{
 
 /*--------------------------MAIN---------------------------*/
 
-main{
+main {
     width: 80%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    justify-items: center;
+    gap: 2rem;
 }
+
 
 .card{
     width: 25rem;
@@ -76,6 +78,15 @@ main{
     border: solid .5px #0151ff;
     box-shadow: 0 0 10px #0151ff;
     margin: 3rem 0;
+}
+
+.card:hover{
+    background: rgba(11, 60, 223, 0.158);
+    backdrop-filter: blur(20px);
+    border: solid .5px #0151ff;
+    box-shadow: 0 0 10px #ffffff;
+    transition: .5s ease;
+    transform: translateY(-6px)
 }
 
 .card_body{
@@ -122,6 +133,61 @@ footer{
     color: #fff;
 }
 
+/*-----------------------MEDIA----------------------------*/
+
+@media (max-width: 1600px) {
+
+    main{
+        grid-template-columns: repeat(2, minmax(320px, 1fr));
+        grid-template-rows: auto;
+        margin: 0 auto;
+    }
+
+    .card{
+        gap: 30rem;
+    }
+
+}
+
+@media (max-width: 1025px) {
+
+    .card{
+        width: 20rem;
+    }
+
+}
+
+@media (max-width: 850px) {
+
+    main{
+        margin: 0 auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .card{
+        width: 30rem;
+    }
+
+}
+
+@media (max-width: 625px) {
+
+    .card{
+        width: 20rem;
+    }
+
+    main {
+        width: 80%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        justify-items: center;
+        gap: 2rem;
+}
+
+}
+
 @media (max-width: 400px) {
     main{
         margin: 0 auto;
@@ -159,4 +225,55 @@ footer{
         width: 100%;
     }
 
+}
+
+@media (max-width: 1325px) {
+
+    body{
+        font-weight:400;
+    }
+
+    nav ul{
+        gap: 3rem;
+    }
+
+
+    .nav_text{
+        letter-spacing: .5rem;
+    }
+}
+
+@media (max-width: 900px) {
+
+    header{
+        height: 4rem;
+    }
+
+    nav ul{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 0 5rem;
+    }
+
+    #card1{
+        margin-top: 5rem;
+    }
+
+    #card2{
+        margin-top: 5rem;
+    }
+}
+
+@media (max-width: 545px) {
+
+    header{
+        height: 6rem;
+    }
+
+    #card1{
+        margin-top: 7rem;
+    }
 }
